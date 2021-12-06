@@ -62,7 +62,7 @@ I tested this app on the following devices :
 
 It ran fine and without any noticable bugs.
 
-## Improvments
+## Improvements
 
 - We could add more typescript typings to make the code more maintainable. Typescript typings were not a requiement of this project so I didn't add all of the typings but it'll be nice to have the project grows.
 - Add end to end testing.
