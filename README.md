@@ -4,7 +4,7 @@
 
 The following screenshots were captured on an iPhone X
                                                                                                                           
-<img src=https://user-images.githubusercontent.com/50458502/144909440-98edf53e-6cfa-4f59-8d28-4f1e941579c9.PNG width="300"> | <img src=https://user-images.githubusercontent.com/50458502/144910857-d95f4b41-3a84-4f37-9fd2-770bdabe5a2e.PNG width="300"> | <img src=https://user-images.githubusercontent.com/50458502/144911055-a179f7f7-0256-4a3d-91b9-2c87cfc5832c.PNG width="300"> 
+<img src=https://user-images.githubusercontent.com/50458502/144909440-98edf53e-6cfa-4f59-8d28-4f1e941579c9.PNG width="200"> | <img src=https://user-images.githubusercontent.com/50458502/144910857-d95f4b41-3a84-4f37-9fd2-770bdabe5a2e.PNG width="200"> | <img src=https://user-images.githubusercontent.com/50458502/144911055-a179f7f7-0256-4a3d-91b9-2c87cfc5832c.PNG width="200"> 
 
 
 ## Installing the app on an android device via an APK file
