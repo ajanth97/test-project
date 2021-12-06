@@ -24,13 +24,16 @@ yarn start
 ```
 4. Follow the instuctions on the browser to run the app on your device using the [expo go app](https://expo.dev/client) or an emulator.
 
-## About the development of this app
+## About the start of development of this app
 
-I started this project using the `expo init` command and selected the option with typescript and react navigation. This generated boilerplate code which was the starting point of this project.
+- I started this project using the `expo init` command and selected the option with typescript and react navigation. This generated boilerplate code which was the starting point of this project.
 
-I removed the tab naviagtion and used a stack naviagtion since this app doesn't require any tabs. 
+- I adopted the file, folder stucture and naming conventions.
+ 
+- I removed the tab naviagtion and used a stack naviagtion since this app doesn't require any tabs. 
 
-I took advantage of the React hooks provided by this boilerplate code to enable auto dark mode in this app.
+- I took advantage of the React hooks provided by this boilerplate code to enable auto dark mode in this app.
+
 
 ## Design decisions
 ### User profile navigation
@@ -54,13 +57,14 @@ I wasn't given the hex code for the color, however it looked like teal so I used
 
 I tested this app on the following devices :
 
-- iPhone X
-- Xiaomi 9T
+- iPhone X (iOS 15.1)
+- Xiaomi 9T (Android 10)
 
 It ran fine and without any noticable bugs.
 
 ## Improvments
 
-- We could add more typescript typings to make the code more maintainable.
-- Add end to end tests.
+- We could add more typescript typings to make the code more maintainable. Typescript typings were not a requiement of this project so I didn't add all of the typings but it'll be nice to have the project grows.
+- Add end to end testing.
 - Add caching of user avatars so that the avatars will be visible offline.
+- Run performance analysis on the app, looking at metrics such as FPS, RAM usage and CPU usage. Further looking at the behaviour of the UI thread and the JS thread. 
