@@ -53,7 +53,7 @@ In order to ensure responsivness I used components from the [React Native Paper]
 
 I wasn't given the hex code for the color, however it looked like teal so I used the following hex code : #00AEAE for the primary color. 
 
-## Testing
+## Manual Testing
 
 I tested this app on the following devices :
 
