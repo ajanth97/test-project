@@ -10,25 +10,42 @@ const updateStorage = async (usersData: []) => {
   }
   catch(e){
     console.log("Error updating async storage")
-    console.log("App will load with previously loaded data")
+  }
+}
+
+const getStorage = async () => {
+  try {
+    const data = await AsyncStorage.getItem('users')
+    return data != null ? JSON.parse(data) : null
+  }
+  catch(e){
+    //If for some reason we are unable to retrieve data from local stoage we will return null.
+    console.log("Error retriveing data from local storage")
+    console.log(e)
+    return null
   }
 }
 
 const fetchUsers = async () => {
+  const userEndpoint = "https://reqres.in/api/users?page=1"
   try {
     const response = await fetch(userEndpoint)
     const {data} = await response.json()
     await updateStorage(data)
+    return data
   }
   catch (e){
-    console.log("Error fetching users ! ")
     console.log(e)
+    console.log("Error fetching users ! ")
+    console.log("We will try to use existing users data from localStoage")
+    //since fetching from API failed we will use data from our localStoage
+    return await getStorage()
   }
 }
 
-const userEndpoint = "https://reqres.in/api/users?page=1"
 export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
+  const [usersData, setUsersData] = React.useState(null);
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
@@ -42,12 +59,8 @@ export default function useCachedResources() {
           'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
         });
         //Load data from API
-        await fetchUsers()
-       /*
-        await new Promise(resolve =>{
-          console.log("waiting")
-          setTimeout(resolve, 2000)})
-       */
+        const loadedUsersData = await fetchUsers()
+        setUsersData(loadedUsersData)
       } catch (e) {
         // We might want to provide this error information to an error reporting service
         console.warn(e);
@@ -60,5 +73,5 @@ export default function useCachedResources() {
     loadResourcesAndDataAsync();
   }, []);
 
-  return isLoadingComplete;
+  return [isLoadingComplete, usersData];
 }

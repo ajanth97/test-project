@@ -9,7 +9,7 @@ type UserCardProps = {
   };
   
 
-  export default function UserCard(props: UserCardProps) {
+export default function UserCard(props: UserCardProps) {
     const theme = useTheme();
     const navigation = useNavigation();
     const {id} = props
@@ -26,4 +26,4 @@ type UserCardProps = {
         </DefaultCard.Content>
       </DefaultCard>
     );
-  }
+}

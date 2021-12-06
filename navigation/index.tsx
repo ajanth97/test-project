@@ -13,6 +13,7 @@ import UserDetailScreen from '../screens/UserDetailScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList} from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { primaryColor } from '../constants/Colors';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -32,7 +33,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: primaryColor}}}>
       <Stack.Screen name="Home" component={HomeScreen} options={{title:"User information"}}/>
       <Stack.Screen name="UserDetail" component={UserDetailScreen} options={{title: "User Profile"}}/>
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
