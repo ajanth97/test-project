@@ -25,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo@2x.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ajanth97.testproject"
     },
     "web": {
       "favicon": "./assets/images/logo.png"
