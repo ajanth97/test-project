@@ -1,5 +1,12 @@
 # Test React Native Project
 
+## Screenshots
+
+The following screenshots were captured on an iPhone X
+                                                                                                                          
+<img src=https://user-images.githubusercontent.com/50458502/144909440-98edf53e-6cfa-4f59-8d28-4f1e941579c9.PNG width="300"> | <img src=https://user-images.githubusercontent.com/50458502/144910857-d95f4b41-3a84-4f37-9fd2-770bdabe5a2e.PNG width="300"> | <img src=https://user-images.githubusercontent.com/50458502/144911055-a179f7f7-0256-4a3d-91b9-2c87cfc5832c.PNG width="300"> 
+
+
 ## Installing the app on an android device via an APK file
 Use the following link to download the APK file for your android device :
 https://expo.dev/accounts/ajanth97/projects/test-project/builds/8f0d1c3c-8f7e-4a78-af1d-de4f700e1449
@@ -31,9 +38,17 @@ The user profile screen in the sample image provided for this project was a smal
 ### Offline support
 One of the requirements of this project was to ensure offline support. In order to achieve this, during the splash screen load I fetch the data from the API and store it in localStorage and also add the data to a Context. In the case that the fetch fails I use data from the localStorage to update my context. The child components will read from the context. This assumes that the very first fetch of the app will be successful for the initial fetching of data. Also note that during offline the user avatars wouldn't be visible since this wasn't a requirement of the project.
 
+### Using FlatList for the scrolling of user cards
+
+Although this list is small and a scroll view would have worked just fine, inorder to prepare the app for a growing longer list I used FlatList for performance reasons.
+
 ### Responsiveness
 
 In order to ensure responsivness I used components from the [React Native Paper](https://reactnativepaper.com) UI component library. These components are responsive.
+
+### Color selection
+
+I wasn't given the hex code for the color, however it looked like teal so I used the following hex code : #00AEAE for the primary color. 
 
 ## Testing
 
